@@ -7,6 +7,7 @@ const server = http.createServer(app);
 const fs = require("fs");
 var moment = require('moment');
 app.use(express.static('views'));
+// app.use(express.static('images'));
 app.engine('html', require('ejs').renderFile);
 // app.set('view engine', 'html')
 
@@ -18,27 +19,15 @@ app.use(bodyParser.urlencoded({
 
 var router = express.Router();
 
-
-app.use(function(req, res, next) {
-  res.locals.user = req.session.user;
-  next();
-});
-
 app.get('/', (req, res) => {
-  res.render('index.ejs', {
-    message: ''
-  });
+  res.render('template.html');
+  // res.render('template.html', {
+  //   title: '으갸갹',
+  //   description: '',
+  // });
 })
 
-
 app.use('/', router); //라우트 미들웨어 등록
-
-
-app.all('*',
-  function(req, res) {
-    res.status(404).redirect('statepage/404.html');
-  }
-);
 
 function trim(value) {
   value = value.replace(/\s+/, ""); //왼쪽 공백제거
