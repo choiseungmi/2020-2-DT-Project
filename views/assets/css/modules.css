@@ -262,9 +262,92 @@ figure {
 }
 
 /* Forms Generic */
-input[type=search], input[type=text], input[type=email], input[type=tel] {
+input[type=search], input[type=text], input[type=email], input[type=tel], input[type=password] {
   padding: 0.4em;
 }
+/* Button */
+input[type="submit"],
+input[type="reset"],
+input[type="button"],
+button,
+.button {
+  -moz-appearance: none;
+  -webkit-appearance: none;
+  -ms-appearance: none;
+  appearance: none;
+  -moz-transition: background-color 0.2s ease-in-out, color 0.2s ease-in-out, opacity 0.2s ease-in-out;
+  -webkit-transition: background-color 0.2s ease-in-out, color 0.2s ease-in-out, opacity 0.2s ease-in-out;
+  -ms-transition: background-color 0.2s ease-in-out, color 0.2s ease-in-out, opacity 0.2s ease-in-out;
+  transition: background-color 0.2s ease-in-out, color 0.2s ease-in-out, opacity 0.2s ease-in-out;
+  background-color: #FF9436;
+  border-radius: 6px;
+  border: 0;
+  color: #ffffff !important;
+  cursor: pointer;
+  display: inline-block;
+  font-weight: 700;
+  height: 2.75em;
+  line-height: 2.75em;
+  padding: 0 1.125em;
+  text-align: center;
+  text-decoration: none;
+  white-space: nowrap; }
+  input[type="submit"]:hover,
+  input[type="reset"]:hover,
+  input[type="button"]:hover,
+  button:hover,
+  .button:hover {
+    background-color: #FF5E00; }
+  input[type="submit"]:active,
+  input[type="reset"]:active,
+  input[type="button"]:active,
+  button:active,
+  .button:active {
+    background-color: #C92800; }
+  input[type="submit"].disabled, input[type="submit"]:disabled,
+  input[type="reset"].disabled,
+  input[type="reset"]:disabled,
+  input[type="button"].disabled,
+  input[type="button"]:disabled,
+  button.disabled,
+  button:disabled,
+  .button.disabled,
+  .button:disabled {
+    opacity: 0.5; }
+  @media screen and (max-width: 480px) {
+    input[type="submit"],
+    input[type="reset"],
+    input[type="button"],
+    button,
+    .button {
+      padding: 0; } }
+
+#signup-form {
+  /* display: -moz-flex;
+  display: -webkit-flex;
+  display: -ms-flex;
+  display: flex;
+  position: relative; } */
+  #signup-form input[type="text"],
+  #signup-form input[type="password"],
+  #signup-form input[type="email"]{
+    width: 18em; }
+  #signup-form > * {
+    margin: 0 0 0 1em; }
+  #signup-form > :first-child {
+    margin: 0 0 0 0; }
+  @media screen and (max-width: 480px) {
+    #signup-form {
+      -moz-flex-direction: column;
+      -webkit-flex-direction: column;
+      -ms-flex-direction: column;
+      flex-direction: column; }
+      #signup-form input[type="type"],
+      #signup-form input[type="password"],
+      #signup-form input[type="email"]{
+        width: 100%; }
+      #signup-form > * {
+        margin: 1.25em 0 0 0; } }
 
 textarea {
   padding: 0.5em;
@@ -669,7 +752,7 @@ textarea {
   padding: 0;
 }
 
-.MOD_HEADER1_Search {
+.id .password {
   margin: 0 0 1rem 0;
   width: 15rem;
 }

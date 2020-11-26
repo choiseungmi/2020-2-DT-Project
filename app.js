@@ -6,8 +6,8 @@ const app = express();
 const server = http.createServer(app);
 const fs = require("fs");
 var moment = require('moment');
+// app.use(express.static('html5up-paradigm-shift'));
 app.use(express.static('views'));
-// app.use(express.static('images'));
 app.engine('html', require('ejs').renderFile);
 // app.set('view engine', 'html')
 
