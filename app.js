@@ -1,6 +1,8 @@
 const http = require("http");
 const express = require('express');
 const bodyParser = require('body-parser');
+const oracledb = require("oracledb");
+var cookieParser = require('cookie-parser');
 const request = require('request');
 const app = express();
 const server = http.createServer(app);
@@ -11,13 +13,27 @@ app.use(express.static('views'));
 app.engine('html', require('ejs').renderFile);
 // app.set('view engine', 'html')
 
+require('dotenv').config();
+
 app.use(bodyParser.json());
 app.use(bodyParser.text());
 app.use(bodyParser.urlencoded({
   extended: false
-})); //post에서bodyparser로 받기 위함
+}));
 
 var router = express.Router();
+
+oracledb.getConnection({
+  user: process.env.DB_USER,
+  password: process.env.DB_PASS,
+  connectString: process.env.CONNECTSTR //oracle설치할때 지정한 이름(파일명으로 확인가능)
+}, function(err, con) {
+  if (err) {
+    console.log("접속이 실패했습니다.", err);
+  }
+  conn = con;
+});
+oracledb.autoCommit = true;
 
 app.get('/', (req, res) => {
   res.render('template.html');

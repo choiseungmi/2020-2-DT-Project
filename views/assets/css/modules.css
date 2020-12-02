@@ -323,11 +323,12 @@ button,
       padding: 0; } }
 
 #signup-form {
-  /* display: -moz-flex;
-  display: -webkit-flex;
+  /* display: -moz-flex; */
+  /* display: -webkit-flex; */
   display: -ms-flex;
   display: flex;
-  position: relative; } */
+  position: relative;
+}
   #signup-form input[type="text"],
   #signup-form input[type="password"],
   #signup-form input[type="email"]{
@@ -390,8 +391,8 @@ textarea {
 
 /* Staff1 */
 .MOD_STAFF_Picture {
-  border-radius: 50%;
-  max-width: 250px;
+  border-radius: 25%;
+  max-width: 200px;
   margin: 0 auto;
   display: block;
 }

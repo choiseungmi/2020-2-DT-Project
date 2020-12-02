@@ -829,6 +829,10 @@ body, html {
     flex: 0 0 25%
   }
 
+  [data-layout^="_r"] [data-layout*=ec4-1] {
+    flex: 0 0 50%
+  }
+
   [data-layout^="_r"] [data-layout*=ec5] {
     flex: 0 0 31.25%
   }
