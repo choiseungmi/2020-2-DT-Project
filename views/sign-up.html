@@ -56,31 +56,14 @@ START MODULE AREA 1: header1
 -->
 	<header class="MOD_HEADER1">
 		<div data-layout="_r">
-			<div data-layout="al16 de10" class="MOD_HEADER1_Title">
+			<div data-layout="al16 de10" class="MOD_HEADER1_Title_sign">
 				<h1 class="MOD_HEADER1_TextLogo">DT Project</h1>
 				<p class="MOD_HEADER1_Slogan">Company slogan, byline or additional message</p>
 			</div>
 			<div data-layout="al16 de6" class="MOD_HEADER1_Details">
 				<!-- Search -->
 				<!-- Signup Form -->
-				<script>
-					function regist() {
-						account.method = "GET"
-						account.action = "/signup"; //서버의 url
-						account.submit();
-					}
 
-					function Dash() {
-						account.action = "/detail"; //서버의 url
-						account.submit();
-					}
-				</script>
-
-				<form class="account" name=account id="signup-form" method="POST" action="/login">
-					<input class="login-id" type="text" name="id" id="id" placeholder="ID">
-					<input class="login-pass" type="password" name="password" id="password" placeholder="Password">
-					<input type="submit" value="Sign in">
-					<input type="button" value="Sign Up" onclick=regist()>
 
 			</div>
 		</div>
@@ -89,103 +72,84 @@ START MODULE AREA 1: header1
 END MODULE AREA 1: Header 1
 -->
 
-	<!--
-START MODULE AREA 3: Image | Text | Text
--->
-	<section class="MOD_LIGHTBOXIMGX4BACKGROUND" data-theme="_bgp">
-		<div data-layout="_r">
-			<div data-layout="ch8 ec-third">
-				<img src="https://unsplash.it/400/300/?random" alt="">
-			</div>
-			<div data-layout="ch8 ec-third">
-				<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis
-					aute irure
-					dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
-			</div>
-			<div data-layout="ec-third">
-				<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis
-					aute irure
-					dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
-			</div>
-		</div>
-	</section>
-	<!--
-END MODULE AREA 3: Image | Text | Text
--->
+			<form class="user" action="/signup" method="POST">
+				<div class="form-group row">
+					<div class="col-sm-6 mb-3 mb-sm-0">
+						<input type="text" name="id" class="form-control form-control-user" id="exampleFirstName" placeholder="ID">
+					</div>
+					<div class="col-sm-6">
+						<input type="text" name="name" class="form-control form-control-user" id="exampleLastName" placeholder="Name">
+					</div>
+				</div>
+				<div class="form-group">
+					<input type="email" name="email" class="form-control form-control-user" id="exampleInputEmail" placeholder="Email Address">
+				</div>
+				<div class="form-group">
+					<input type="text" name="address" class="form-control form-control-user" id="exampleInputEmail" placeholder="주소">
+				</div>
+				<div class="form-group">
+					<input type="tel" name="tel" class="form-control form-control-user" id="exampleInputEmail" placeholder="전화번호">
+				</div>
+				<div class="form-group row">
+					<div class="col-sm-6 mb-3 mb-sm-0">
+						<input type="password" name="password" class="form-control form-control-user" id="exampleInputPassword" placeholder="Password">
+					</div>
+					<div class="col-sm-6">
+						<input type="password" name="password2" class="form-control form-control-user" id="exampleRepeatPassword" placeholder="Repeat Password">
+					</div>
+				</div>
 
-	<!--
-START MODULE AREA 4: Staff 1
--->
-	<section>
-		<div data-layout="_r">
-			<div data-layout="ch8 ec4-1">
-				<img class="MOD_STAFF_Picture" src="https://unsplash.it/400/400/?random" alt="" data-theme="_is1">
-				<p class="MOD_STAFF_Name" data-theme="_bb1">John Smith</p>
-				<p class="MOD_STAFF_Positon">Position</p>
-				<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</p>
-			</div>
-			<div data-layout="ch8 ec4-1">
-				<img class="MOD_STAFF_Picture" src="https://unsplash.it/400/400/?random" alt="" data-theme="_is1">
-				<p class="MOD_STAFF_Name" data-theme="_bb1">Jane Smith</p>
-				<p class="MOD_STAFF_Positon">Position</p>
-				<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</p>
-			</div>
 
-		</div>
-	</section>
-	<!--
-END MODULE AREA 4: Staff 1
--->
-
-	<!--
+				<input action="/" type="submit" class="btn btn-primary btn-user btn-block" value="Register Account">
+		<!--
 START MODULE AREA 5: Footer 1
 -->
-	<footer>
-		<div class="MOD_FOOTER1" data-theme="_bgd">
-			<div data-layout="_r">
-				<div data-layout="ch8 ec4">
-					<h3>About us</h3>
-					<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. </p>
-				</div>
-				<div data-layout="al16 ch8 ec4 ec-n4">
-					<h3>Links</h3>
-					<nav>
-						<ul>
-							<li><a href="#">Footer Link 1</a></li>
-							<li><a href="#">Footer Link 2</a></li>
-							<li><a href="#">Footer Link 3</a></li>
-							<li><a href="#">Footer Link 4</a></li>
-							<li><a href="#">Footer Link 5</a></li>
-						</ul>
-					</nav>
-				</div>
-				<div data-layout="ch8 ec4">
-					<h3>Contact Details</h3>
-					<p>Email: <a href="mailto:#">email@email.com</a><br>Phone: <a href="tel:#">01234 567 8910</a>
-					</p>
-					<address>
-						123 The High Street<br>
-						The Town<br>
-						The City<br>
-						County / State<br>
-						Postal / Zip Code
-					</address>
-				</div>
-			</div>
-		</div>
-		<div class="MOD_FOOTER1_Copyright" data-theme="_bgvd">
-			<div data-layout="_r" class="nopadding">
-				<div data-layout="al16">
-					<p>Copyright &copy; 2017 Company</p>
+		<footer>
+			<div class="MOD_FOOTER1" data-theme="_bgd">
+				<div data-layout="_r">
+					<div data-layout="ch8 ec4">
+						<h3>About us</h3>
+						<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. </p>
+					</div>
+					<div data-layout="al16 ch8 ec4 ec-n4">
+						<h3>Links</h3>
+						<nav>
+							<ul>
+								<li><a href="#">Footer Link 1</a></li>
+								<li><a href="#">Footer Link 2</a></li>
+								<li><a href="#">Footer Link 3</a></li>
+								<li><a href="#">Footer Link 4</a></li>
+								<li><a href="#">Footer Link 5</a></li>
+							</ul>
+						</nav>
+					</div>
+					<div data-layout="ch8 ec4">
+						<h3>Contact Details</h3>
+						<p>Email: <a href="mailto:#">email@email.com</a><br>Phone: <a href="tel:#">01234 567 8910</a>
+						</p>
+						<address>
+							123 The High Street<br>
+							The Town<br>
+							The City<br>
+							County / State<br>
+							Postal / Zip Code
+						</address>
+					</div>
 				</div>
 			</div>
-		</div>
-	</footer>
-	<!--
+			<div class="MOD_FOOTER1_Copyright" data-theme="_bgvd">
+				<div data-layout="_r" class="nopadding">
+					<div data-layout="al16">
+						<p>Copyright &copy; 2017 Company</p>
+					</div>
+				</div>
+			</div>
+		</footer>
+		<!--
 END MODULE AREA 5: Footer 1
 -->
 
-	<script src="assets/js/index.js"></script>
-</body>
+		<script src="assets/js/index.js"></script>
+	</body>
 
 </html>

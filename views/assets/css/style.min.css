@@ -656,7 +656,7 @@ body, html {
   }
 
   [data-layout^="_r"] [data-layout*=de10] {
-    flex: 0 0 62.5%
+    flex: 0 0 100%
   }
 
   [data-layout^="_r"] [data-layout*=de11] {

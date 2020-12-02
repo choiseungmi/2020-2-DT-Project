@@ -793,6 +793,10 @@ textarea {
     text-align: left;
   }
 
+  .MOD_HEADER1_Title_sign {
+    text-align: center;
+  }
+
   .MOD_HEADER1 > [data-layout="_r"] {
     margin-top: 2rem;
   }
