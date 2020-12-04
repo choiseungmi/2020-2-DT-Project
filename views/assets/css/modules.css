@@ -1,7 +1,10 @@
 body {
   font-size: 100%;
 }
-
+a {
+  color: black;
+  text-decoration: none;
+}
 [data-theme*=_bgp] {
   background: #e0e0e0;
 }
